@@ -52,3 +52,5 @@
    1. 이슈 제목은 아래 형식으로 한다
       1. `[아이템 08]. {제목}`
 4. 스터디가 끝난후 스터디장은 주차별 PR을 merge한다
+   1. squash and merge로 PR을 merge한다
+5. PR merge가 모두 완료된 후에 main 브랜치를 base로 1번 과정을 다시 반복한다
