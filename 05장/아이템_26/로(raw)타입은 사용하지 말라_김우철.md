@@ -249,7 +249,7 @@ private static void unsafeAdd(List<Object> list, Object o) {
 ```java
 public static void main(String[] args) {
   List<String> strings = new ArrayList<>();
-  unsafeAdd(Collections.singletonList(strings), "test";
+  unsafeAdd(Collections.singletonList(strings), "test");
   String s = strings.get(0); 
 }
  
@@ -258,7 +258,8 @@ private static void unsafeAdd(List<Object> list, Object o) {
 }
 ```
 - `Collections.singletonList`를 사용하면 ``List<Object>`에 넣을 수는 있다.
-  - `Collections.singletonList(strings)`는 List<List<String>>를 반환, List는 Object의 하위 타입이기 때문에 넣을 수 있다.
+  - `Collections.singletonList(strings)`는 List<Object>를 반환하기 때문이다.
+  - 런타임에는 List<List<String>>로 바뀐다.
 - 하지만, List<List<String>>에 Object를 넣을 수 없기 때문에 add시 `UnsupportedOperationException`이 발생한다.
 
 #### 예시2
